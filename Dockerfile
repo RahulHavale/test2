@@ -1,5 +1,10 @@
-From openjdk.17
-COPY target/demo-app1.jar /usr/app/
+
+FROM openjdk:17
+
+COPY target/demo-app1.jar  /usr/app/
+
 WORKDIR /usr/app/
+
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","demo-app1.jar"]
+
+ENTRYPOINT ["java", "-jar", "demo-app1.jar"]
